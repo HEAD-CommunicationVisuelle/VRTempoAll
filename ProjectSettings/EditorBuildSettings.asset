@@ -20,6 +20,21 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/ProjetTempoMGSC/Scenes/TempoMGC Accueil.unity
     guid: c2406f400d16a40b19c341ba5c04d213
+  - enabled: 1
+    path: Assets/ProjetTempoMGSC/Scenes/TempoMGC Niveau 1.unity
+    guid: e31b3985116af47edb0691e00650896b
+  - enabled: 1
+    path: Assets/ProjetTempoMGSC/Scenes/TempoMGC Niveau 2.unity
+    guid: 854f805da8fce411fbd181e067103096
+  - enabled: 1
+    path: Assets/ProjetTempoAV/Scenes/Credits.unity
+    guid: 1a79b8145dcb24d9d9fe4c1ca328f781
+  - enabled: 1
+    path: Assets/ProjetTempoAV/Scenes/JogaBonito-1.unity
+    guid: 283e3d3e6e5624379bd49e22aeb81216
+  - enabled: 1
+    path: Assets/ProjetTempoAV/Scenes/JogaBonito-2.unity
+    guid: a6190a5c8ca2c4cd1b9c6b789bee86c7
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: b5c084978678e460782683e26401aaa6, type: 2}
