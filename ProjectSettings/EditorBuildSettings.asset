@@ -5,16 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/ProjetTempoPR/Scenes/TempoPR Accueil.unity
     guid: a2c806fecddea40e2a3c6d3c7309661d
-  - enabled: 1
+  - enabled: 0
     path: Assets/ProjetTempoPR/Scenes/TempoPR level 01.unity
     guid: 533505c2a694d4c0f91d90ed414364e4
-  - enabled: 1
+  - enabled: 0
     path: Assets/ProjetTempoPR/Scenes/TempoPR level 02 haut bas.unity
     guid: bfea2e2dd6bf64d9c9f907e91be265b9
-  - enabled: 1
+  - enabled: 0
     path: Assets/ProjetTempoPR/Scenes/TempoPR level 03 diagonales.unity
     guid: 82d6bc9412a3b4ca580c0242250c26ca
   - enabled: 1
@@ -35,6 +35,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/ProjetTempoAV/Scenes/JogaBonito-2.unity
     guid: a6190a5c8ca2c4cd1b9c6b789bee86c7
+  - enabled: 1
+    path: "Assets/ProjetTempoLJ/Scenes/TempoLJ Cr\xE9dits.unity"
+    guid: 28488c1e226ae4a28920d45fa45bde95
+  - enabled: 1
+    path: Assets/ProjetTempoLJ/Scenes/TempoLJ lvl 1.unity
+    guid: 29ed4b7f30d7945819b9e0ee8a95c8c5
+  - enabled: 1
+    path: Assets/ProjetTempoLJ/Scenes/TempoLJ lvl 2.unity
+    guid: 0428b75c810e141319d0584abd299483
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: b5c084978678e460782683e26401aaa6, type: 2}
