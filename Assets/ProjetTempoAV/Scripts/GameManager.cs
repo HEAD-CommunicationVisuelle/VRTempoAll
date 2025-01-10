@@ -1,50 +1,46 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameManager : MonoBehaviour
+namespace TempoAV
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+
+    public class GameManager : MonoBehaviour
     {
-        Fob.onFinished.AddListener(OnFobFinished);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    void OnFobFinished()
-    {
-     Debug.Log("GameManager: All fobs are destroyed");
-
-     //Load the next scene
-     LoadNextScene();
-
-    }
-
-    void LoadNextScene()
-    {
-        Debug.Log("GameManager: LoadNextScene");
-
-        int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
-
-        if (nextSceneIndex >= SceneManager.sceneCountInBuildSettings)
+        // Start is called once before the first execution of Update after the MonoBehaviour is created
+        void Start()
         {
-            nextSceneIndex = 0; //Home scene
+            Fob.onFinished.AddListener(OnFobFinished);
         }
 
-        SceneManager.LoadScene(nextSceneIndex);
+        // Update is called once per frame
+        void Update()
+        {
 
+        }
 
+        void OnFobFinished()
+        {
+            Debug.Log("GameManager: All fobs are destroyed");
+
+            //Load the next scene
+            LoadNextScene();
+
+        }
+
+        void LoadNextScene()
+        {
+            Debug.Log("GameManager: LoadNextScene");
+
+            int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
+
+            if (nextSceneIndex >= SceneManager.sceneCountInBuildSettings)
+            {
+                nextSceneIndex = 0; //Home scene
+            }
+
+            SceneManager.LoadScene(nextSceneIndex);
+
+        }
 
     }
-
-
-
-
-
-
-
 }
