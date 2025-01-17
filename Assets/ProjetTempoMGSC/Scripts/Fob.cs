@@ -2,6 +2,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 
 namespace TempoMGSC
 {
@@ -31,7 +32,7 @@ namespace TempoMGSC
             //if there are no more Fob instances
             if (count == 0)
             {
-                Debug.Log("All Fobs are destroyed");
+                Debug.Log("All Fobs are destroyed after " + Time.timeSinceLevelLoad + " seconds in the scene " + UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
                 // call the onFinished event
                 onFinished.Invoke();
             }
@@ -40,8 +41,11 @@ namespace TempoMGSC
         // Update is called once per frame
         void Update()
         {
+            // Turbo speed if T key pressed
+            float turbo = Keyboard.current.tKey.isPressed ? 10 : 1;
+
             // Move the object on a z axis
-            transform.Translate(Vector3.forward * speed * Time.deltaTime);
+            transform.Translate(Vector3.forward * speed * turbo * Time.deltaTime);
         }
         public void OnPointerClick(PointerEventData eventData)
         {

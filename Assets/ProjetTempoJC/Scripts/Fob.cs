@@ -34,7 +34,7 @@ namespace TempoJC
             if (count == 0)
             {
 
-                //Debug.Log("All Fobs are destroyed");
+                Debug.Log("All Fobs are destroyed after " + Time.timeSinceLevelLoad + " seconds in the scene " + UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
 
                 //call the onFinished event
                 onFinsihed.Invoke();

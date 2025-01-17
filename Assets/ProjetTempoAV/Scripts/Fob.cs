@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 
 namespace TempoAV
 {
@@ -29,7 +30,7 @@ namespace TempoAV
 
             if (count == 0)
             {
-                Debug.Log("All fobs are destroyed");
+                Debug.Log("All Fobs are destroyed after " + Time.timeSinceLevelLoad + " seconds in the scene " + UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
                 onFinished.Invoke();
             }
         }
@@ -37,8 +38,11 @@ namespace TempoAV
         // Update is called once per frame
         void Update()
         {
+            // Turbo speed if T key pressed
+            float turbo = Keyboard.current.tKey.isPressed ? 10 : 1;
+
             //move objects in z axis
-            transform.Translate(Vector3.forward * speed * Time.deltaTime);
+            transform.Translate(Vector3.forward * speed * turbo * Time.deltaTime);
 
         }
 

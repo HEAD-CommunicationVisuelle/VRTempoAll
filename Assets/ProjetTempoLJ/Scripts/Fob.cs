@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 
 namespace TempoLJ
 {
@@ -32,6 +33,7 @@ namespace TempoLJ
             // if the count is 0, it means that all fobs have been destroyed
             if (Count == 0)
             {
+                Debug.Log("All Fobs are destroyed after " + Time.timeSinceLevelLoad + " seconds in the scene " + UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
                 onFinish.Invoke();
             }
         }
@@ -39,8 +41,11 @@ namespace TempoLJ
         // Update is called once per frame
         void Update()
         {
+            // Turbo speed if T key pressed
+            float turbo = Keyboard.current.tKey.isPressed ? 10 : 1;
+
             // Move the object on z axis
-            transform.Translate(Vector3.forward * speed * Time.deltaTime);
+            transform.Translate(Vector3.forward * speed * turbo * Time.deltaTime);
         }
 
         public void OnPointerClick(PointerEventData eventData)
