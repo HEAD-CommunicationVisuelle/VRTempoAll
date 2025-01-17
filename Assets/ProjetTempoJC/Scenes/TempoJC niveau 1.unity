@@ -166,7 +166,7 @@ MonoBehaviour:
   spawnInitialDelay: 2
   spawnDelay: 2
   initialSpeed: 3
-  fobCount: 20
+  fobCount: 15
   horizontalSpread: 1
   verticalSpread: 1
 --- !u!4 &376984503

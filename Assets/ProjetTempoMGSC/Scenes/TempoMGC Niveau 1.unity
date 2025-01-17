@@ -6938,7 +6938,7 @@ MonoBehaviour:
   spawnInitialDelay: 0.052
   spawnDelay: 0.8
   initialSpeed: 1
-  fobCount: 50
+  fobCount: 30
   horizontalSpread: 1
   verticalSpread: 1
 --- !u!4 &1903345851 stripped
